@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"usermeta": {"embedOptions": {"theme": "fivethirtyeight"}}, "config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-5555db0f31504a0292de39d287ae932d"}, "mark": {"type": "bar", "orient": "horizontal"}, "encoding": {"color": {"field": "Level", "title": "Level", "type": "nominal"}, "tooltip": [{"field": "School Name", "title": "School", "type": "nominal"}, {"field": "Year", "title": "Year", "type": "nominal"}, {"field": "Level", "title": "Level", "type": "nominal"}, {"field": "Percentage", "format": ".2f", "title": "Percentage of Students in this Level", "type": "quantitative"}], "x": {"axis": {"format": "%"}, "field": "Percentage", "stack": "normalize", "type": "quantitative"}, "y": {"field": "Year", "title": "Year", "type": "nominal"}}, "height": 300, "params": [{"name": "subject_param", "bind": {"input": "select", "options": ["math", "ela"], "name": "Select Subject: "}, "value": "math"}, {"name": "school_param", "bind": {"input": "select", "options": ["P.S 307", "P.S 8"], "name": "Select School: "}, "value": "P.S 307"}], "title": {"text": "Percentage of Students in Each Level by Year", "anchor": "start", "fontSize": 20, "subtitle": "Select a subject and a school from two schools and two subjects"}, "transform": [{"filter": "datum.subject == subject_param && datum['School Name'] == school_param"}, {"fold": ["L1", "L2", "L3,4"], "as": ["Level", "Percentage"]}], "width": 400, "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json", "datasets": {"data-5555db0f31504a0292de39d287ae932d": [{"School Name": "P.S 307", "Year": 2013, "Mean Scale Score": 318.8766785, "L1": 13.0, "L2": 27.66666603, "L3,4": 59.33333206, "subject": "math"}, {"School Name": "P.S 307", "Year": 2014, "Mean Scale Score": 322.0765381, "L1": 12.75510216, "L2": 26.7857151, "L3,4": 60.45918274, "subject": "math"}, {"School Name": "P.S 307", "Year": 2015, "Mean Scale Score": 324.7054138, "L1": 10.5405407, "L2": 26.48648643, "L3,4": 62.97297287, "subject": "math"}, {"School Name": "P.S 307", "Year": 2016, "Mean Scale Score": 324.6255798, "L1": 11.6279068, "L2": 24.8837204, "L3,4": 63.4883728, "subject": "math"}, {"School Name": "P.S 307", "Year": 2017, "Mean Scale Score": 324.1395874, "L1": 10.52631569, "L2": 26.77345467, "L3,4": 62.70022964, "subject": "math"}, {"School Name": "P.S 8", "Year": 2013, "Mean Scale Score": 287.3571472, "L1": 50.79365158, "L2": 30.15872955, "L3,4": 19.04761887, "subject": "math"}, {"School Name": "P.S 8", "Year": 2014, "Mean Scale Score": 294.4108582, "L1": 38.75968933, "L2": 37.20930099, "L3,4": 24.03100777, "subject": "math"}, {"School Name": "P.S 8", "Year": 2015, "Mean Scale Score": 287.568634, "L1": 48.36601257, "L2": 31.37254906, "L3,4": 20.26143837, "subject": "math"}, {"School Name": "P.S 8", "Year": 2016, "Mean Scale Score": 280.3684082, "L1": 53.38345718, "L2": 30.07518768, "L3,4": 16.54135323, "subject": "math"}, {"School Name": "P.S 8", "Year": 2017, "Mean Scale Score": 286.6976624, "L1": 48.06201553, "L2": 27.9069767, "L3,4": 24.03100777, "subject": "math"}, {"School Name": "P.S 307", "Year": 2013, "Mean Scale Score": 318.6342163, "L1": 14.09395981, "L2": 29.19463158, "L3,4": 56.71141052, "subject": "ela"}, {"School Name": "P.S 307", "Year": 2014, "Mean Scale Score": 321.5360718, "L1": 11.34020615, "L2": 31.18556786, "L3,4": 57.47422791, "subject": "ela"}, {"School Name": "P.S 307", "Year": 2015, "Mean Scale Score": 325.1378479, "L1": 11.08108139, "L2": 24.86486435, "L3,4": 64.05405426, "subject": "ela"}, {"School Name": "P.S 307", "Year": 2016, "Mean Scale Score": 330.1365662, "L1": 6.828193665, "L2": 21.8061676, "L3,4": 71.36563873, "subject": "ela"}, {"School Name": "P.S 307", "Year": 2017, "Mean Scale Score": 332.8574524, "L1": 5.578512192, "L2": 22.72727203, "L3,4": 71.69421387, "subject": "ela"}, {"School Name": "P.S 8", "Year": 2013, "Mean Scale Score": 287.8800049, "L1": 45.59999847, "L2": 42.40000153, "L3,4": 12.0, "subject": "ela"}, {"School Name": "P.S 8", "Year": 2014, "Mean Scale Score": 285.7786255, "L1": 48.8549614, "L2": 33.58778763, "L3,4": 17.55725098, "subject": "ela"}, {"School Name": "P.S 8", "Year": 2015, "Mean Scale Score": 281.8896179, "L1": 51.94805145, "L2": 36.36363602, "L3,4": 11.68831158, "subject": "ela"}, {"School Name": "P.S 8", "Year": 2016, "Mean Scale Score": 289.5954285, "L1": 47.32824326, "L2": 28.24427414, "L3,4": 24.4274807, "subject": "ela"}, {"School Name": "P.S 8", "Year": 2017, "Mean Scale Score": 290.674408, "L1": 45.73643494, "L2": 33.33333206, "L3,4": 20.930233, "subject": "ela"}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

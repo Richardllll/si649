@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "layer": [{"mark": {"type": "bar", "height": 15, "opacity": 0.6}, "encoding": {"opacity": {"condition": {"param": "param_83", "value": 1}, "value": 0.6}, "tooltip": {"field": "score", "type": "quantitative"}, "x": {"axis": {"title": ""}, "field": "score", "type": "quantitative"}, "y": {"axis": {"title": ""}, "field": "record", "type": "nominal"}}, "name": "view_72"}, {"mark": {"type": "rule", "color": "firebrick", "size": 3}, "encoding": {"x": {"aggregate": "average", "axis": {"title": ""}, "field": "score", "type": "quantitative"}}, "transform": [{"filter": {"param": "param_83"}}]}, {"mark": {"type": "text", "align": "left", "color": "firebrick", "dx": 7, "fontSize": 12}, "encoding": {"text": {"aggregate": "average", "field": "score", "format": ".2f", "type": "quantitative"}, "x": {"aggregate": "average", "axis": {"title": ""}, "field": "score", "type": "quantitative"}}, "transform": [{"filter": {"param": "param_83"}}]}], "data": {"name": "data-6343d9179d736ff8068e249c83740534"}, "height": 400, "params": [{"name": "param_83", "select": {"type": "interval", "encodings": ["y"]}, "views": ["view_72"]}], "title": {"text": "Goals of World Cup Winners since 1950", "subtitle": "Average Number of Goals per Match of Winning Teams"}, "width": 400, "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json", "datasets": {"data-6343d9179d736ff8068e249c83740534": [{"record": "1950 Uruguay", "score": 3.75}, {"record": "1954 Germany", "score": 4.17}, {"record": "1958 Brazil", "score": 2.67}, {"record": "1962 Brazil", "score": 2.33}, {"record": "1966 England", "score": 1.83}, {"record": "1970 Brazil", "score": 3.17}, {"record": "1974 Germany", "score": 1.86}, {"record": "1978 Argentina", "score": 2.14}, {"record": "1982 Italy", "score": 1.71}, {"record": "1986 Argentina", "score": 2.0}, {"record": "1990 Germany", "score": 2.14}, {"record": "1994 Brazil", "score": 1.57}, {"record": "1998 France", "score": 2.14}, {"record": "2002 Brazil", "score": 2.57}, {"record": "2006 Italy", "score": 1.71}, {"record": "2010 Spain", "score": 1.14}, {"record": "2014 Germany", "score": 2.57}, {"record": "2018 France", "score": 2.0}, {"record": "2022 Argentina", "score": 2.14}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
