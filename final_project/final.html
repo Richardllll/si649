@@ -37,14 +37,16 @@
 
 <p>Our analysis draws on the <code>data-police-shootings</code> GitHub repository, which documents U.S. police-involved killings from 2015 to 2024 as compiled by <em>The Washington Post</em>. To ensure completeness, missing agency codes were filled by matching agency names with FBI and Department of Justice records, using both automated and manual checks.</p>
 
-<!-- ===== Map intro bridge ===== -->
 <p>Before turning the spotlight toward the map, it is worth asking where these one-thousand deaths a year actually unfold. Numbers alone cannot convey the unevenness of risk; only geography can reveal how the same laws play out differently from one ZIP code to the next. With that in mind, we begin by situating every fatal encounter on the American landscape.</p>
 
-<!-- ===== Choropleth / map placeholder ===== -->
 <figure>
-  <!-- Replace src with the relative path to your exported choropleth image -->
-  <img src="images/choropleth_map.png" alt="Choropleth map of fatal police shootings per 100k residents" style="max-width:100%; height:auto;">
-  <figcaption><strong>Figure 1.</strong> Fatal police shootings per 100,000 residents, 2015-2024.</figcaption>
+  <iframe
+    src="final_project/chart.html"
+    title="Interactive map of fatal police shootings"
+    style="border:none; width:100%; height:600px;"
+    loading="lazy">
+  </iframe>
+  <figcaption><strong>Figure&nbsp;1.</strong> Fatal police shootings per 100 000 residents, 2015-2024 (interactive).</figcaption>
 </figure>
 
 <p>The map’s story feels almost like geographic destiny: pastel blues of New England give way to progressively darker teal as the eye drifts west, until New Mexico and its Mountain-West neighbors appear nearly black. In those states, an average resident is three times more likely to die at the hands of police than someone in Massachusetts or New York. By scaling each state’s tally to its population, the visualization sidesteps the usual fixation on raw totals and foregrounds the lived risk that hovers over an ordinary traffic stop or mental-health call. Alaska looms larger than California, not because of headlines but because its vast rural patrol zones and high gun-ownership rates make every encounter more combustible.</p>
@@ -52,12 +54,16 @@
 <p>Yet geography is only the first layer of the story. Clicking the scatter layer adds texture. Across every state the points are overwhelmingly blue—our marker for men—underscoring a fact that rarely makes headlines yet dominates the data: police shootings are profoundly gendered. But race-coding shifts from border to border. In New Mexico, sprays of magenta and violet reveal Hispanic and Native victims far more often than the national norm; in Texas, a larger share of cyan points—White victims—fills the screen. Apparent “majorities” cannot be read as universal rules; they mirror local population makeup. The real question is proportionality: are certain communities dying at higher rates than their share of the local population would predict? That statistical thread runs through the rest of our analysis.</p>
 
 <p>This dual focus—location on one axis, identity on the other—invites a more nuanced conversation. It suggests that reform cannot be one-size-fits-all: the Bronx and rural Wyoming face different catalysts even if the endpoint is the same. Stereotyping any single community as uniquely “dangerous” or “vulnerable” distorts reality. Our goal is to pair individual stories with data that trace systemic fault lines, showing where violence clusters, whom it touches most often, and—crucially—why.</p>
+raphic histogram placeholder ===== -->
 
-<!-- ===== Demographic histogram placeholder ===== -->
 <figure>
-  <!-- Replace src with the relative path to your histogram image -->
-  <img src="images/demographic_histogram.png" alt="Histogram of police shooting victims by age, race, and gender" style="max-width:100%; height:auto;">
-  <figcaption><strong>Figure 2.</strong> Victim age, race, and gender, 2015-2024.</figcaption>
+  <iframe
+    src="final_project/chart.html"
+    title="Interactive map of fatal police shootings"
+    style="border:none; width:100%; height:600px;"
+    loading="lazy">
+  </iframe>
+  <figcaption><strong>Figure&nbsp;1.</strong> Fatal police shootings per 100 000 residents, 2015-2024 (interactive).</figcaption>
 </figure>
 
 <p>To shift from the broad sweep of place to the intimate scale of people, we narrow our lens from state lines to life stages. The dots that clustered on the map now stack into vertical bars—cross-sections of age, race, and gender that answer a different question: not where risk is greatest, but who bears it most acutely.</p>
@@ -66,7 +72,6 @@
 
 <p>Two details break through the aggregate view. First, a thin orange strip—Hispanic victims—runs through almost every band, reminding us that Latino communities experience fatal force at a steady, if less publicized, rate. Second, the single-digit counts in the “0–9” column include nearly as many girls as boys. These rare cases question how threats are assessed in chaotic domestic-violence or hostage calls. Taken together, the age-race-gender matrix underscores a core point: risk is shaped not only by where a person lives but by how their identity intersects with local policy, training gaps, and stereotypes.</p>
 
-<!-- ===== Conclusion ===== -->
 <h2>Conclusion</h2>
 
 <p>Viewed together, geography and life-course portraits tell a single, unsettling story. Risk is not sprinkled randomly across the United States, nor distributed evenly across its people. It pools in the high-desert counties of New Mexico and the remote townships of Alaska; it spikes in the lives of young men and then changes color—quite literally—as age advances. Whether the spark is a traffic stop outside Dallas or a welfare check in rural Wyoming, the fault lines have been etched by policy, economics, and bias.</p>
