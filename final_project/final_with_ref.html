@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mapping Police Shootings in America: Who, Where, and How Often</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+      margin: 0 auto;
+      max-width: 950px;
+      padding: 2rem;
+      color:#222;
+    }
+    h1{ font-size: 2.2rem; margin-bottom: .2rem;}
+    h2{ font-size: 1.6rem; margin-top: 3rem; }
+    figure{ margin: 2rem 0; text-align:center;}
+    figcaption{ font-size:.9rem; color:#555;}
+    .byline{ font-style:italic; font-size:.95rem; margin-bottom:2rem;}
+    @media (max-width:600px){ body{ padding:1rem;} }
+  </style>
+</head>
+
+<body>
+
+<h1>Mapping Police Shootings in America: Who, Where, and How Often</h1>
+<p class="byline">By Jiaren Liu (&lt;liujr@umich.edu&gt;) &amp; Ruoyi Gao (&lt;gaoruoyi@umich.edu&gt;)</p>
+
+<p>Deadly force, as defined by the U.S. Armed Forces, refers to any force that is likely—or should reasonably be known—to cause death or serious bodily harm. In the United States, law-enforcement officers are legally permitted to use deadly force if they reasonably believe an individual poses a serious threat of harm or death [1].</p>
+
+<p>Yet while the legal definition provides a framework for justification, the use of deadly force remains highly controversial, especially in cases involving unarmed individuals, people with disabilities, or members of marginalized communities. On April&nbsp;23, for example, a&nbsp;36-year-old man in Virginia was fatally shot by police during a traffic stop after opening fire on two officers [2]. Just days earlier, Idaho police repeatedly shot a 17-year-old autistic, nonverbal boy who was playing with a knife in his own yard. Despite being severely limited by cerebral palsy and unable to climb a fence, he was still deemed a threat [3].</p>
+
+<p>These incidents are not isolated. According to <em>Nature</em> [4], U.S. police fatally shoot around 1,000 people each year—far more than in other developed nations. Such practices are often criticized for their potential abuse and for disproportionately affecting certain groups. As Stanford psychologist Jennifer L. Eberhardt argues in her book <em>Biased</em> [5], racial stereotypes, particularly those targeting Black men, can play a significant role in decisions to use deadly force.</p>
+
+<p>This article asks two questions: What structural patterns emerge in the identities of those most often killed by police? And how does the geography of these incidents reflect broader inequalities in law enforcement? By examining victim demographics alongside the spatial distribution of fatal shootings, we aim to reveal systemic disparities and inform meaningful policy reform.</p>
+
+<p>Our analysis draws on the <code>data-police-shootings</code> GitHub repository [6], which reliably documents U.S. police-involved killings from 2015 to 2024 as compiled by <em>The Washington Post</em>. To ensure completeness, missing agency codes were filled by matching agency names with FBI and Department of Justice records, using both automated and manual checks.</p>
+
+<p>Before turning the spotlight toward the map, it is worth asking where these one-thousand deaths a year actually unfold. Numbers alone cannot convey the unevenness of risk; only geography can reveal how the same laws play out differently from one zip code to the next. With that in mind, we begin by situating every fatal encounter on the American landscape.</p>
+
+<figure>
+  <iframe
+    src="chart.html"
+    title="https://richardllll.github.io/si649/final_project/chart.html"
+    style="border:none; width:100%; height:750px;"
+    loading="lazy">
+  </iframe>
+  <figcaption><strong>Figure&nbsp;1.</strong> Fatal police shootings per 100 000 residents, 2015-2024 (interactive).</figcaption>
+</figure>
+
+<p>Looking into this map of the US representing shooting counts proportion throughout the country, the story it tells feels almost geographic destiny: the pastel blues of New England give way to progressively darker teal as the viewer’s eye drifts west, until New Mexico and its Mountain-West neighbors appear nearly black.  In those states, an average resident is three times more likely to die at the hands of police than someone in Massachusetts or New York.  By scaling each state’s tally to its population, the visualization sidesteps the usual fixation on raw totals, and also foregrounds the lived risk that hovers over an ordinary traffic stop or mental-health call. Another interesting point is that Alaska looms larger than California, not because of sensational headlines but because its vast rural patrol zones and high gun-ownership rates make every encounter more combustible [7].</p>
+
+<p>Yet geography is only the first layer of the story.  Clicking into the scatter layer adds texture to the broad gradient we have just traced. In every state the points are overwhelmingly blue, which is the marker we use for men, underscoring a fact that rarely makes headlines yet dominates the data: police shootings are a profoundly gendered phenomenon.  But the color of the points changes in a random way from one border to the next when we encode for race.  In New Mexico, the spray of magenta and violet dots shows that Hispanic and Native victims appear far more often than in the country at large; shift the focus east to Texas and a larger share of cyan points, which is our symbol for White victims, fills the screen. The contrast reminds us that an apparent “majority” in any single state cannot be read as a universal rule; it is inseparable from who actually lives there.  States with large Latino or Indigenous populations naturally record more victims from those groups, while the Deep South map lights up with some pink markers that represent Black victims.  The real question, therefore, is not simple counts but proportionality: are particular communities dying at higher rates than their share of the local population would predict?  That is what we will try to go further in the future, adding analysis and data baseline on the concrete population and race proportion.</p>
+
+<p>This dual focus—location on one axis, identity on the other—invites a more nuanced public conversation.  It suggests that reform cannot be one-size-fits-all: the Bronx and rural Wyoming face different catalysts, even if the statistical endpoint is the same.  And it underscores why stereotyping any single community as uniquely “dangerous” or “vulnerable” distorts the reality on the ground.  Our goal is to follow these threads, pairing stories from individuals with the numbers that trace systemic fault lines, so readers can understand both where violence clusters and whom it touches most often and, crucially, why.</p>
+
+<figure>
+  <iframe
+    src="https://richardllll.github.io/si649/final_project/layer1.html"
+    title="Interactive map of fatal police shootings"
+    style="border:none; width:100%; height:650px;"
+    loading="lazy">
+  </iframe>
+  <figcaption><strong>Figure&nbsp;1.</strong> Fatal police shootings per 100 000 residents, 2015-2024 (interactive).</figcaption>
+</figure>
+
+<p>To move from the broad sweep of place to the intimate scale of people, we narrow our lens from state lines to life stages. The dots we watched cluster on the map now stack themselves into vertical bars, each one a cross-section of age, race, and gender that answers a different question: not where the risk is greatest, but who bears it most acutely.</p>
+
+<p>The demographic histogram deepens the picture that the choropleth merely hinted at.  Split by gender, the columns tell a lopsided story: men dominate every age band, and the curve that tracks total fatalities rises steeply through adolescence, peaks in the thirties, and then falls away almost symmetrically.  That contour alone would be alarming, but the color blocks inside each bar reveal an even more complicated reality.  Among teenagers and young adults, Black and White victims appear in roughly equal numbers, despite the fact that Black Americans make up only about 14 percent of the national population.  The imbalance shifts with age: as we move into middle and later life, the teal segments representing White victims widen until they crowd out almost every other hue.  By the time we reach the 60-plus cohorts, police shootings have become an overwhelmingly White phenomenon, a pattern that forces us to revise the popular image of who is most at risk.</p>
+
+<p>Two details break through the aggregate view and refuse to be ignored.  First, a thin orange strip, Hispanic victims, runs through almost every band, reminding us that Latino communities experience fatal force at a steady, if less publicized, rate across the life course.  Second, and most startling, are the single-digit counts in the “0–9” column, where the victims are almost as likely to be girls as boys.  These cases are too few to show up on national trend lines, yet their very existence calls into question the frameworks officers use to assess threats, especially during chaotic domestic-violence or hostage calls.  Taken together, the age-race-gender matrix underlines the argument made earlier: risk is not merely a function of where a person lives, but also of how their identity intersects with local policies, training gaps, and entrenched stereotypes.  The cost of those intersecting lines is written here in hundreds of lives, each one a data point that reshapes the narrative of police violence in America.</p>
+
+<h2>Conclusion</h2>
+
+<p>Taken together all these analysis, the geography and the life-course portrait tell a single, unsettling story.  Risk is not sprinkled randomly across the country, nor is it distributed evenly across the population.  It pools in the high-desert counties of New Mexico and the remote townships of Alaska; it spikes in the lives of young men and then changes color—quite literally—as age advances.  Whatever the local trigger, a traffic stop outside Dallas or a welfare check in rural Wyoming, the fault lines that shape the outcome have been etched over decades by policy, economics, and stereotypes.</p>
+
+<p>To change that trajectory, reform must travel on two tracks at once.  One runs through: stronger crisis-intervention teams in the counties where mental-health services are thin, tighter gun regulations in states where weapons are plentiful, mandatory reporting standards that close the data gaps we still face. The other runs through identity: training that counters implicit bias, community oversight that lends credibility to investigations, and social investments that reduce the volatile encounters born of poverty and untreated illness. Neither track will succeed on its own, but together they can shrink the dark bands on the map and flatten the peaks in the demographic bars.</p>
+
+<p>The numbers in this analysis are blunt as one row per life lost. They cannot capture every nuance of a face-to-face encounter. Yet their consistency across ten years and ten thousand cases leaves little doubt that the status quo is predictable, and predictability is policy by another name. Making that policy visible is the first step toward rewriting it, so that the likelihood of surviving a police encounter is determined less by where one happens to live or how one happens to look, and more by the universal right to walk away alive.</p>
+
+<h2>Reference</h2>
+
+<p>
+  [1] Deadly force (2024) <em>Wikipedia</em>. Available at: 
+  <a href="https://en.wikipedia.org/wiki/Deadly_force#cite_note-4" target="_blank">
+    https://en.wikipedia.org/wiki/Deadly_force#cite_note-4
+  </a> (Accessed: 25 April 2025).
+</p>
+
+
+<p>
+  [2] Koch, A. and Fox News (2025) Virginia police officers shot during traffic stop near Popular Shopping Center; suspect killed, 
+  <em>Fox News</em>. Available at: 
+  <a href="https://www.foxnews.com/us/virginia-police-officers-shot-traffic-stop-near-popular-shopping-center-suspect-arrested" target="_blank">
+    https://www.foxnews.com/us/virginia-police-officers-shot-traffic-stop-near-popular-shopping-center-suspect-arrested
+  </a> (Accessed: 25 April 2025).
+</p>
+
+<p>
+  [3] Autistic teen shot by Idaho Police dies after being removed from life support (2025) <em>CNN</em>. Available at: 
+  <a href="https://www.cnn.com/2025/04/12/us/autistic-teen-idaho-police-shooting-dies/index.html" target="_blank">
+    https://www.cnn.com/2025/04/12/us/autistic-teen-idaho-police-shooting-dies/index.html
+  </a> (Accessed: 25 April 2025).
+</p>
+
+
+<p>
+  [4] Why US police shootings are so deadly ― and why some police forces do better (2025) <em>Nature News</em>. Available at: 
+  <a href="https://www.nature.com/articles/d41586-025-01271-0" target="_blank">
+    https://www.nature.com/articles/d41586-025-01271-0
+  </a> (Accessed: 25 April 2025).
+</p>
+
+<p>
+  [5] Eberhardt, J.L. (2020) <em>Biased: Uncovering the hidden prejudices that shape our lives</em>. London: Windmill Books.
+</p>
+
+<p>
+  [6] Washingtonpost (no date) <em>Washingtonpost/data-police-shootings</em>: The Washington Post is compiling a database of every fatal shooting in the United States by a police officer in the line of duty since 2015., GitHub. Available at: 
+  <a href="https://github.com/washingtonpost/data-police-shootings" target="_blank">
+    https://github.com/washingtonpost/data-police-shootings
+  </a> (Accessed: 25 April 2025).
+</p>
+
+<p>
+  [7] Gun ownership by State 2023 (2023) <em>Wisevoter</em>. Available at: 
+  <a href="https://wisevoter.com/state-rankings/gun-ownership-by-state/" target="_blank">
+    https://wisevoter.com/state-rankings/gun-ownership-by-state/
+  </a> (Accessed: 25 April 2025).
+</p>
+
+
+<h2>Generative AI Use</h2>
+<p>We use ChatGPT to assist with creating visualizations, enhancing our writing, and converting the article into HTML format.</p>
+
+</body>
+</html>
